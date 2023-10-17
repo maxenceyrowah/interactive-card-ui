@@ -1,0 +1,93 @@
+<ng-container *ngIf="!isMobile; else mobileTemplate">
+  <div class="flex flex-row relative">
+    <div
+      class="basis-2/6 bg-[url('src/assets/images/bg-main-mobile.png')] sm:bg-[url('src/assets/images/bg-main-desktop.png')] bg-no-repeat h-screen bg-cover">
+    </div>
+
+    <div class="basis-4/6 p-4 h-screen">
+      <div class="flex flex-row relative top-1/4 -left-1/4">
+        <div class="mr-[50px]">
+          <div class="relative -left-20 mb-4">
+            <div class="absolute p-5 w-full h-full">
+              <div class="flex flex-col h-full justify-between">
+                <div>
+                  <img [src]="cardLogo" alt="pattern card">
+                </div>
+
+                <div>
+                  <div class="text-neutral-light text-xl mb-4">
+                    <span>
+                      0000 0000 0000 0000
+                    </span>
+                  </div>
+                  <div class="flex flex-row justify-between text-neutral-light text-sm">
+                    <p class="text-sm">JANE APPLESEED</p>
+                    <p>00 / 00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img [src]="frontImg" alt="l'avant de la carte">
+          </div>
+
+          <div class="relative">
+            <div class="absolute top-24 left-80 text-sm text-neutral-white">000</div>
+            <img [src]="backImg" alt="l'arriere de la carte">
+          </div>
+        </div>
+
+        <div class="p-4 basis-3/6">
+          <form>
+            <div class="mt-10">
+              <div class="mb-5">
+                <label for="email" class="block text-sm leading-6 text-neutral-grayish">CARDHOLDER
+                  NAME</label>
+                <div class="mt-2">
+                  <input placeholder="e.g. Jane Appleseed"
+                    class="border-2 border-neutral-light p-2 rounded-lg w-full focus:outline-none focus:border-neutral-violet text-neutral-violet">
+                </div>
+              </div>
+
+              <div class="mb-5">
+                <label for="email" class="block text-sm leading-6 text-neutral-grayish">CARD NUMBER</label>
+                <div class="mt-2">
+                  <input placeholder="e.g. 1234 5678 9123 0000"
+                    class="border-2 border-neutral-light p-2 rounded-lg w-full focus:outline-none focus:border-neutral-violet text-neutral-violet">
+                </div>
+              </div>
+
+              <div class="mt-1 flex flex-row">
+                <div class="mr-2 basis-2/4">
+                  <label for="email" class="block text-sm leading-6 text-neutral-grayish mb-2">EXP. DATE ( MM /
+                    YY)</label>
+                  <div class="flex flex-row flex-1">
+                    <input placeholder="MM"
+                      class="border-2 border-neutral-light p-2 rounded-lg w-full mr-2 focus:outline-none focus:border-neutral-violet text-neutral-violet">
+                    <input placeholder="YY"
+                      class="border-2 border-neutral-light p-2 rounded-lg w-full mr-7 focus:outline-none focus:border-neutral-violet text-neutral-violet">
+                  </div>
+
+                </div>
+
+                <div class="basis-2/4">
+                  <label for="email" class="block text-sm leading-6 text-neutral-grayish mb-2">CVC</label>
+                  <input placeholder="e.g. 123"
+                    class="border-2 border-neutral-light p-2 rounded-lg w-full focus:outline-none focus:border-neutral-violet text-neutral-violet">
+                </div>
+
+              </div>
+            </div>
+
+            <div><button type="submit"
+                class="text-neutral-light bg-neutral-violet w-full mt-7 p-4 rounded-lg">Confirm</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #mobileTemplate>
+  mobile component
+</ng-template>
